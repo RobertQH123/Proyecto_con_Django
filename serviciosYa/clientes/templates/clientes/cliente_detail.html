@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+{% block title %}
+  Detalles de Cliente
+{% endblock %}
+{% block body %}
+<h1> Detalles de Cliente</h1>
+<div class="card" style="width: 20rem;">
+  <div class="card-body">
+    <h2> {{object.apellido }} / {{ object.nombre }} </h2>
+  </div>
+  <div class="card-text">
+    <p> Telefono : {{ object.telefono }} </p>
+    <p> Direccion : {{ object.direccion }} </p>
+    <p> Fecha de nacimiento : {{ object.fecha }} </p>
+  </div>
+  <div class="d-flex flex.row">
+    <a href="/clientes/{{ object.id }}/delete" class="btn btn-primary" style="margin : 0 6px;">Eliminar</a>
+    <a href="/clientes/{{ object.id }}/update" class="btn btn-primary" style="margin : 0 6px;">Editar</a>
+    <a href="/clientes/" class="btn btn-primary" style="margin : 0 6px;">Regresar</a>
+  </div>
+</div>
+{% endblock %}

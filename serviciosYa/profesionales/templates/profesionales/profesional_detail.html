@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title %}
+Detalles de profesional
+{% endblock %}
+{% block body %}
+<h1> Detalles de profesional </h1>
+<div class="card" style="width: 20rem;">
+<div class="card-img-top card align-items-center">
+  <img src="{{ object.foto.url }}"  alt="foto" style="width: 18rem;">
+</div>
+<div class="card-body">
+  <h5 class="card-title">{{object.apellido }} / {{ object.nombre }}</h5>
+<div class="card-text">
+<p> Telefono : {{ object.telefono }} </p>
+<p> Fecha Nacimiento : {{ object.fechaNac }} </p>
+<p> Profesion : {{ object.profesion }} </p>
+</div>
+<a  href="/clientes/{{ object.id }}/delete" class="btn btn-primary">Eliminar</a>
+<a  href="/clientes/{{ object.id }}/update" class="btn btn-primary">Editar</a>
+<a  href="/clientes/" class="btn btn-primary">Regresar</a>
+{% endblock %}

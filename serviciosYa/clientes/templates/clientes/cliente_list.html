@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}
+  Lista de Clientes
+{% endblock %}
+{% block body %}
+<h1> Listado de Clientes </h1>
+<div class="list-group">
+{% for instance in object_list %}
+  <p>
+    <a href = '{{ instance.get_absolute_url }}' class="list-group-item list-group-item-action">{{ instance.id }} - {{ instance.nombre }} </a> 
+  </p>
+{% endfor %}
+</div>
+{% endblock %} 

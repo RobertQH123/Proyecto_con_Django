@@ -1,0 +1,16 @@
+{%load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      {% block title %}
+      {% endblock %}
+    </title>
+  </head>
+
+  <body>
+    <img src="{% static "clientes/logoServiciosYA.jpeg" %}" alt="logo-ServiciosYA">
+    {% block body %}
+    {% endblock %}
+  </body>
+</html>
